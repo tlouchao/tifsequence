@@ -1,5 +1,5 @@
-import './static/scss/App.css'
-import Component from './components/Component'
+import './static/scss/App.scss'
+import Component from './component/Component'
 
 const App = () => {
   return (
