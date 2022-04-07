@@ -1,0 +1,22 @@
+@use 'variables' as vars;
+
+@mixin breakpoint_range($mtype: screen, $from: false, $to: false){
+    // verify params
+    @each $k in ($from, $to){
+        @if $k and not map-has-key(vars.$breakpoints, $k){ 
+            @error "Must select from breakpoint values: #{map-keys(vars.$breakpoints)}";
+        }
+    }
+    // build condition list
+    $conditions: $mtype;
+    @debug $conditions;
+    @each $k, $v in (min-width: $from, max-width: $to){
+        @if $v {
+            $voffset: if($k == 'max-width', -1px, 0px);
+            $arg: " and (#{$k}: #{map-get(vars.$breakpoints, $v) + $voffset})";
+            $conditions: $conditions + $arg;
+        }
+    }
+    @warn $conditions;
+    @media #{$conditions} { @content; }
+}

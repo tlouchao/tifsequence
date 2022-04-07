@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Component = () => {
+function Component(props: {className: string}) {
     return (
-        <div>
+        <div className={props.className}>
             <p>I am a component! Hello, Pluto!</p>
         </div>
     )

@@ -1,10 +1,10 @@
-import './static/scss/App.scss'
-import Component from './component/Component'
+import 'static/scss/styles.scss'
+import AppLayout from 'component/AppLayout'
 
 const App = () => {
   return (
-    <div className="App">
-      <Component />
+    <div id="app">
+      <AppLayout id="appLayout" />
     </div>
   )
 }
