@@ -1,0 +1,26 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+$cmin: map-get(v.$cssgrid, cmin);
+$cmax: map-get(v.$cssgrid, cmax);
+
+#wrapper {
+    display: grid;
+    @include m.breakpoint_range($to: phone) {
+      grid-template-rows: minmax($cmin, $cmax) auto;
+    }
+    @include m.breakpoint_range($from: phone, $to: tablet) {
+      grid-template-rows: minmax($cmin, $cmax) auto;
+    }
+    @include m.breakpoint_range($from: tablet, $to: desktop) {
+      grid-template-columns: minmax($cmin, $cmax) auto;
+    }
+    @include m.breakpoint_range($from: desktop) {
+      grid-template-columns: minmax($cmin, $cmax) auto;
+    }
+}
+
+.main-content {
+  background-color: magenta;
+}
+  

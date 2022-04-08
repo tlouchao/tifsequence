@@ -1,4 +1,5 @@
 @use './utils/reset'; // styles reset
 
 @use './app';
-@use './appLayout';
+@use './layout/layout';
+@use './component/sidebar';

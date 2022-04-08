@@ -9,14 +9,11 @@
     }
     // build condition list
     $conditions: $mtype;
-    @debug $conditions;
     @each $k, $v in (min-width: $from, max-width: $to){
         @if $v {
-            $voffset: if($k == 'max-width', -1px, 0px);
-            $arg: " and (#{$k}: #{map-get(vars.$breakpoints, $v) + $voffset})";
+            $arg: " and (#{$k}: #{map-get(vars.$breakpoints, $v)})";
             $conditions: $conditions + $arg;
         }
     }
-    @warn $conditions;
     @media #{$conditions} { @content; }
 }

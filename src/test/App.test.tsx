@@ -4,6 +4,6 @@ import App from '../App'
 
 test('render component', () => {
   render(<App />)
-  const elem = screen.getByText(/I am a component!/i)
+  const elem = screen.getByText(/I am a sidebar!/i)
   expect(elem).toBeInTheDocument()
 });
