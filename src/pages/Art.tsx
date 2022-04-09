@@ -1,9 +1,13 @@
 import React from 'react'
+import Layout from 'layout/Layout';
 
 function Art() {
     return (
-        <div id="art">
-        </div>
+        <Layout>
+            <div id="art">
+                <p>Art directory</p>
+            </div>
+        </Layout>
     )
 }
 

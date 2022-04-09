@@ -6,21 +6,27 @@ $cmax: map-get(v.$cssgrid, cmax);
 
 #wrapper {
     display: grid;
-    @include m.breakpoint_range($to: phone) {
-      grid-template-rows: minmax($cmin, $cmax) auto;
-    }
-    @include m.breakpoint_range($from: phone, $to: tablet) {
-      grid-template-rows: minmax($cmin, $cmax) auto;
+    height: 100vh;
+    @include m.breakpoint_range($from: desktop) {
+      grid-template-columns: minmax($cmin, $cmax) auto;
+      grid-template-rows: auto;
     }
     @include m.breakpoint_range($from: tablet, $to: desktop) {
       grid-template-columns: minmax($cmin, $cmax) auto;
+      grid-template-rows: auto;
     }
-    @include m.breakpoint_range($from: desktop) {
-      grid-template-columns: minmax($cmin, $cmax) auto;
+    @include m.breakpoint_range($from: phone, $to: tablet) {
+      grid-template-rows: minmax($cmin, $cmax) auto;
+      grid-template-columns: auto;
+    }
+    @include m.breakpoint_range($to: phone) {
+      grid-template-rows: minmax($cmin, $cmax) auto;
+      grid-template-columns: auto;
     }
 }
 
 .main-content {
-  background-color: magenta;
+  height: 100%;
+  background-color: v.$bgcolor;
 }
   

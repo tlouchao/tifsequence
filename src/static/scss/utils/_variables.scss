@@ -1,6 +1,10 @@
 // css grid
-$cssgrid: (cmin: 180px, 
-           cmax: 200px);
+$bgcolor: #484848;
+$navcolor: #363636;
+$textcolor: #EEEEEE;
+
+$cssgrid: (cmin: 120px, 
+           cmax: 160px);
 
 // media query
 $breakpoints: (phone: 640px, 

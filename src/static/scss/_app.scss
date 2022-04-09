@@ -1,3 +1,7 @@
+@use 'utils/variables' as v;
+
 #app {
-    text-align: center;
+    color: v.$textcolor;
+    font-size: 14px;
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }

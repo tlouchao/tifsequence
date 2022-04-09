@@ -1,11 +1,13 @@
 import React from 'react'
-import Layout from '../layout/Layout'
+import Layout from 'layout/Layout'
 
 function Home() {
     return (
         <Layout>
-            <div id="home" className="main-content">
-                <p>This is a homepage!</p>
+            <div id="home">
+                <div>
+                    <p>This is a homepage!</p>
+                </div>
             </div>
         </Layout>
     )

@@ -1,15 +1,15 @@
-import { ReactChild } from 'react'
-import Sidebar from '../component/Sidebar'
+import React, { ReactElement } from 'react'
+import Sidebar from 'component/Sidebar'
 
 interface LayoutProps {
-    children: ReactChild | ReactChild[];
+    children: ReactElement;
   }
 
 function Layout(props: LayoutProps) {
     return (
         <div id='wrapper'>
             <nav><Sidebar /></nav>
-            <main>{props.children}</main>
+            <main>{React.cloneElement(props.children, {className: "main-content"})}</main>
         </div>
     );
 }

@@ -1,14 +1,14 @@
 import React from 'react'
 import Layout from 'layout/Layout'
 
-function Code() {
+function Misc() {
     return (
         <Layout>
-            <div id="code">
-                <p>App directory</p>
+            <div id="other">
+                <p>Miscellaneous directory</p>
             </div>
         </Layout>
     )
 }
 
-export default Code;
+export default Misc;
