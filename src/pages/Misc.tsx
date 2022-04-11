@@ -4,7 +4,7 @@ import Layout from 'layout/Layout'
 function Misc() {
     return (
         <Layout>
-            <div id="other">
+            <div id="misc">
                 <p>Miscellaneous directory</p>
             </div>
         </Layout>

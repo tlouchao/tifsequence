@@ -3,7 +3,7 @@ import Home from 'pages/Home'
 import About from 'pages/About'
 import Art from 'pages/Art'
 import Code from 'pages/Code'
-import Other from 'pages/Other'
+import Misc from 'pages/Misc'
 import 'static/scss/styles.scss'
 
 const App = () => {
@@ -25,7 +25,7 @@ const App = () => {
           <Route path='3D Graphics' element={<ThreeGraphics />} />
           */}
         </Route>
-        <Route path='other' element={<Other />} />
+        <Route path='misc' element={<Misc />} />
       </Routes>
     </div>
   )

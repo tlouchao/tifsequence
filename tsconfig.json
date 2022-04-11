@@ -9,6 +9,7 @@
       "baseUrl": "src",
       "rootDir": "src",
       "outDir": "build",
+      "noImplicitAny": false,
       "allowJs": true,
       "skipLibCheck": true,
       "esModuleInterop": true,
@@ -23,8 +24,13 @@
       "noEmit": true,
       "jsx": "react-jsx"
     },
+    "include": [
+      "**/*.ts",
+      "/*.tsx",
+      "/*.svg",
+    ],
     "exclude": [
-        "node_modules",
-        "build"
-    ]
+        "node_modules/*",
+        "build/*"
+    ],
   }

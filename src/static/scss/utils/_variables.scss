@@ -1,12 +1,32 @@
 // css grid
-$bgcolor: #484848;
-$navcolor: #363636;
-$textcolor: #EEEEEE;
+$colors: (
+    bordercolor: #606060,
+    bgcolor: #484848,
+    navcolor: #363636,
+    textcolor: #EEEEEE,
+    iconcolor: #AAAAAA,
+    vlinkcolor: rgb(42, 216, 216),
+    alinkcolor: rgb(234, 64, 234)
+);
 
-$cssgrid: (cmin: 120px, 
-           cmax: 160px);
+$fontfamily:  "Helvetica", 
+              Arial, 
+              sans-serif;
+
+$font: (
+    fontsize: 18px,
+    fontnavsize: 10px,
+    fontfamily: $fontfamily
+);
+
+$cssgrid: (
+    cmin: 120px, 
+    cmax: 160px
+);
 
 // media query
-$breakpoints: (phone: 640px, 
-               tablet: 768px, 
-               desktop: 1024px) !default;
+$breakpoints: (
+    phone: 640px, 
+    tablet: 768px, 
+    desktop: 1024px
+) !default;

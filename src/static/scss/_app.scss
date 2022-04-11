@@ -1,7 +1,7 @@
 @use 'utils/variables' as v;
 
 #app {
-    color: v.$textcolor;
-    font-size: 14px;
-    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    color: map-get(v.$colors, textcolor);
+    font-size: map-get(v.$font, fontsize);
+    font-family: map-get(v.$font, fontfamily);
 }
