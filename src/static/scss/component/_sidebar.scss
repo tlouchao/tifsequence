@@ -35,6 +35,7 @@
             line-height: 1em;
             font-size: map-get(v.$font, fontnavsize);
             a {
+                transition: color .1s;
                 position: relative;
                 top: 1px; // 1px vert offset
                 &:link, &:visited {
@@ -49,6 +50,12 @@
         }
     }
     #sidebar-icons {
+        @include m.breakpoint_range($from: phone, $to: tablet) {
+            border-top: 1px solid map-get(v.$colors, bordercolor);
+        }
+        @include m.breakpoint_range($to: phone) {
+            border-top: 1px solid map-get(v.$colors, bordercolor);
+        }
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -63,7 +70,13 @@
                 svg {
                     width: 16px;
                     height: 16px;
+                    transition: fill .1s;
                     fill: map-get(v.$colors, iconcolor);
+                }
+                &:hover, &:active {
+                    svg {
+                        fill: map-get(v.$colors, textcolor);
+                    }
                 }
             }
         }

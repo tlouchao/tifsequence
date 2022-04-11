@@ -1,0 +1,9 @@
+@use '../utils/mixins' as m;
+@use '../utils/variables' as v;
+
+#home {
+    background-image: url('../../imgs/guardian_grassy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

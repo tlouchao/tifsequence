@@ -5,9 +5,6 @@ function Home() {
     return (
         <Layout>
             <div id="home">
-                <div>
-                    <p>This is a homepage!</p>
-                </div>
             </div>
         </Layout>
     )

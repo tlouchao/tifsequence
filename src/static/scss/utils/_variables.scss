@@ -1,10 +1,10 @@
 // css grid
 $colors: (
-    bordercolor: #606060,
     bgcolor: #484848,
     navcolor: #363636,
+    bordercolor: #606060,
     textcolor: #EEEEEE,
-    iconcolor: #AAAAAA,
+    iconcolor: #888888,
     vlinkcolor: rgb(42, 216, 216),
     alinkcolor: rgb(234, 64, 234)
 );
@@ -20,7 +20,7 @@ $font: (
 );
 
 $cssgrid: (
-    cmin: 120px, 
+    cmin: 160px, 
     cmax: 160px
 );
 
