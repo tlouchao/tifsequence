@@ -17,7 +17,7 @@ function Sidebar() {
         return <li key={elem}><Link to={linkTo}>{linkTitle}</Link></li> })
 
     // sidebar icons
-    const hrefs: string[] = ['https://www.linkedin.com/in/tlouchao/','https://github.com/tlouchao','mailto:tifachao@gmail.com']                     
+    const hrefs: string[] = ['https://www.linkedin.com/in/tlouchao/','https://github.com/tlouchao','mailto:tiffanylouchao@gmail.com']                     
     const icons: ReactComponent[] = [<InIcon />,<GhIcon />,<MailIcon />]
     const iconsItems: ReactElement[] = hrefs.map((elem, idx) => {
         return (<div key={'si-' + idx} className="sidebar-icon">

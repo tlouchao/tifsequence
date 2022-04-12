@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: stretch;
     line-height: 0;
+    font-family: v.$fontfamily-helvetica;
     background-color: map-get(v.$colors, navcolor);
     #sidebar-brand {
         align-self: center;

@@ -1,7 +1,7 @@
-// css grid
 $colors: (
-    bgcolor: #484848,
+    bgcolor: #424242,
     navcolor: #363636,
+    cardcolor: #505050,
     bordercolor: #606060,
     textcolor: #EEEEEE,
     iconcolor: #888888,
@@ -9,12 +9,10 @@ $colors: (
     alinkcolor: rgb(234, 64, 234)
 );
 
-$fontfamily:  "Helvetica", 
-              Arial, 
-              sans-serif;
-
+$fontfamily:  "Arial Narrow", Arial, Helvetica, sans-serif;
+$fontfamily-helvetica: "Helvetica", sans-serif;
 $font: (
-    fontsize: 18px,
+    fontsize: 16px,
     fontnavsize: 10px,
     fontfamily: $fontfamily
 );

@@ -1,0 +1,40 @@
+@use '../utils/mixins' as m;
+@use '../utils/variables' as v;
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .card {
+        display: flex;
+        margin: 1em;
+        padding: 1em;
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: map-get(v.$colors, cardcolor);
+        @include m.breakpoint_range($to: phone) {
+            flex-direction: column;
+        }
+        img {
+            align-self: center;
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+        }
+        .card-content {
+            @include m.breakpoint_range($from: desktop) {
+                margin-left: 1em;
+            }
+            @include m.breakpoint_range($from: tablet, $to: desktop) {
+                margin-left: 1em;
+            }
+            @include m.breakpoint_range($from: phone, $to: tablet) {
+                margin-left: 1em;
+            }
+            @include m.breakpoint_range($to: phone) {
+                margin-top: 1em;
+            }
+        }
+        p { max-width: 800px; }
+    }
+}
