@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import { Link } from 'react-router-dom'
 // svg import
-import { ReactComponent as InIcon } from 'static/imgs/linkedin-in-brands.svg'
+import { ReactComponent as InIcon } from 'static/imgs/linkedin-brands.svg'
 import { ReactComponent as GhIcon } from 'static/imgs/github-brands.svg'
 import { ReactComponent as MailIcon } from 'static/imgs/envelope-solid.svg'
 
@@ -42,6 +42,9 @@ function Sidebar() {
             </div>
             <div id="sidebar-icons">
                 {iconsItems}
+            </div>
+            <div id="sidebar-copyright">
+                <p>&copy; 2022 Tiffany C</p>
             </div>
         </div>
     )

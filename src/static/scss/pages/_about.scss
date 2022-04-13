@@ -7,16 +7,19 @@
     justify-content: center;
     .card {
         display: flex;
-        margin: 1em;
+        margin: 0em 1em;
+        margin-top: 1em;
         padding: 1em;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: center;
         background-color: map-get(v.$colors, cardcolor);
+        min-height: 144px;
+        max-width: 720px;
         @include m.breakpoint_range($to: phone) {
             flex-direction: column;
         }
         img {
-            align-self: center;
             width: 128px;
             height: 128px;
             border-radius: 50%;
@@ -32,9 +35,14 @@
                 margin-left: 1em;
             }
             @include m.breakpoint_range($to: phone) {
+                margin-left: 0em;
                 margin-top: 1em;
             }
         }
-        p { max-width: 800px; }
+        p { max-width: 540px; }
+    }
+    .icons svg {
+        width: 32px;
+        height: 32px;
     }
 }

@@ -34,24 +34,12 @@
 }
 
 #home-img-overlay {
-    @include m.breakpoint_range($from: phone, $to: tablet) {
-        width: 100vw;
-    }
-    @include m.breakpoint_range($to: phone) {
-    width: 100vw;
-    }
     height: 100%;
     background-color: white;
     z-index: 1;
 }
 
 #home-img {
-    @include m.breakpoint_range($from: phone, $to: tablet) {
-        width: 100vw;
-    }
-    @include m.breakpoint_range($to: phone) {
-    width: 100vw;
-    }
     height: 100%;
     background-image: url('../../imgs/guardian_grassy.png');
     background-size: cover;
