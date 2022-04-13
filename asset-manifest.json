@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.72feabed.css",
-    "main.js": "/static/js/main.d79c0d43.js",
+    "main.js": "/static/js/main.0a84d8c7.js",
     "static/media/cinema-4d-logo.svg": "/static/media/cinema-4d-logo.a8af00b7a2ff0df16a8fae7c0a9140d4.svg",
     "static/media/guardian_grassy.png": "/static/media/guardian_grassy.e2899d8559f466fb3e0f.png",
     "static/media/Blender_logo.svg": "/static/media/Blender_logo.e1f221731ac65bcde0af5dd6b72ef338.svg",
@@ -20,10 +20,10 @@
     "static/media/linkedin-brands.svg": "/static/media/linkedin-brands.35d7cb01584842580623e4e827edfe6d.svg",
     "static/media/React-icon.svg": "/static/media/React-icon.928f956d9c8ebcffb98a8e917154a81a.svg",
     "main.72feabed.css.map": "/static/css/main.72feabed.css.map",
-    "main.d79c0d43.js.map": "/static/js/main.d79c0d43.js.map"
+    "main.0a84d8c7.js.map": "/static/js/main.0a84d8c7.js.map"
   },
   "entrypoints": [
     "static/css/main.72feabed.css",
-    "static/js/main.d79c0d43.js"
+    "static/js/main.0a84d8c7.js"
   ]
 }
