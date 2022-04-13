@@ -8,6 +8,10 @@ import { ReactComponent as BlendIcon } from 'static/imgs/Blender_logo.svg'
 import { ReactComponent as C4DIcon } from 'static/imgs/cinema-4d-logo.svg'
 import { ReactComponent as RedshiftIcon } from 'static/imgs/redshift-seeklogo.svg'
 import { ReactComponent as SketchupIcon } from 'static/imgs/SketchUp_logo.svg'
+import { ReactComponent as RjsIcon } from 'static/imgs/React-icon.svg'
+import { ReactComponent as TsIcon } from 'static/imgs/Typescript_logo_2020.svg'
+import { ReactComponent as PyIcon } from 'static/imgs/python-3-logo.svg'
+import { ReactComponent as CppIcon } from 'static/imgs/ISO_C++_Logo.svg'
 
 function About() {
 
@@ -21,8 +25,8 @@ function About() {
     const summaryLanding: string[] = ['The landing page model is textured and rendered within the ', ' software package.']
     const c4d: HTMLAnchorElement = <a href="https://www.maxon.net/en/cinema-4d" style={{color: '#FF4000'}}>Cinema 4D</a>
 
-    const icons: ReactComponent[][] = [[<AeIcon />, <AiIcon />, <PsIcon />, <AnIcon />], [<BlendIcon />, <C4DIcon />, <RedshiftIcon />, <SketchupIcon />]]
-    const iconsLabels: string[][] = [["After Effects", "Illustrator", "Photoshop", "Animate"], ["Blender", "Cinema 4D", "RedShift", "Sketchup"], ["React JS", "TypeScript", "Python 3", "C++"]]
+    const icons: ReactComponent[][] = [[<AeIcon />, <AiIcon />, <PsIcon />, <AnIcon />], [<C4DIcon />, <RedshiftIcon />, <BlendIcon />, <SketchupIcon />],[<TsIcon />, <RjsIcon />, <PyIcon />, <CppIcon />]]
+    const iconsLabels: string[][] = [["After Effects", "Illustrator", "Photoshop", "Animate"], ["Cinema 4D", "Redshift", "Blender", "Sketchup"], ["TypeScript", "React.JS", "Python 3", "C++"]]
 
     // return JSX
     return (
@@ -60,7 +64,7 @@ function About() {
                                     return(
                                         <div key={'iconrow' + idxRow} className= 'icon-row'>
                                             {iconsRow}
-                                            <p>{iconsLabels[idxCol][idxRow]}</p>
+                                            <p>{iconsLabels[idxCol][idxRow].toUpperCase()}</p>
                                         </div>
                                     )}
                                 )}

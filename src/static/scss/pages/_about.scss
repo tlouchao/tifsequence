@@ -14,7 +14,7 @@
         justify-content: flex-start;
         align-items: center;
         background-color: map-get(v.$colors, cardcolor);
-        min-height: 144px;
+        min-height: 180px;
         max-width: 720px;
         @include m.breakpoint_range($to: phone) {
             flex-direction: column;
@@ -41,8 +41,41 @@
         }
         p { max-width: 540px; }
     }
-    .icons svg {
-        width: 32px;
-        height: 32px;
+    .card-header {
+        min-height: 72px;
+        .icons {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+            .icon-col {
+                display: flex;
+                flex-direction: column;
+                .icon-row {
+                    width: 100%;
+                    display:flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: .1em;
+                    p {
+                        font-size: 12px;
+                        padding-left: .5em;
+                        transition: transform .2s, color .2s;
+                        color: map-get(v.$colors, subtextcolor);
+                        &:hover {
+                            transform: translate(5px, 0px);
+                            color: map-get(v.$colors, textcolor);
+                        }
+                    }
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        transition: transform .2s;
+                        &:hover {
+                            transform: scale(1.25, 1.25);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
