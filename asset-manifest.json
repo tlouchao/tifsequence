@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.72feabed.css",
-    "main.js": "/static/js/main.7eee2069.js",
-    "static/media/cinema-4d-logo.svg": "/static/media/cinema-4d-logo.a8af00b7a2ff0df16a8fae7c0a9140d4.svg",
-    "static/media/guardian_grassy.png": "/static/media/guardian_grassy.e2899d8559f466fb3e0f.png",
-    "static/media/Blender_logo.svg": "/static/media/Blender_logo.e1f221731ac65bcde0af5dd6b72ef338.svg",
-    "static/media/Photoshop.svg": "/static/media/Photoshop.495e7c7653f13565cf7ef772322736bc.svg",
-    "static/media/AfterEffects.svg": "/static/media/AfterEffects.db9bc92801589144820b4a41405bfeea.svg",
-    "static/media/ISO_C++_Logo.svg": "/static/media/ISO_C++_Logo.2441702dffa95ca3c92c20816e386640.svg",
-    "static/media/python-3-logo.svg": "/static/media/python-3-logo.82147ff2f774e1473996ef474c53c76d.svg",
-    "static/media/redshift-seeklogo.svg": "/static/media/redshift-seeklogo.10b183f7a71d66af595995f9ec53d6c2.svg",
-    "static/media/AnimateCopy.svg": "/static/media/AnimateCopy.eb076684750f7db7e07053afc7546514.svg",
-    "static/media/github-brands.svg": "/static/media/github-brands.833b63e28cadf07403bc81451d30b858.svg",
-    "static/media/Illustrator.svg": "/static/media/Illustrator.27767692bc4726d1ebb94b58a5188255.svg",
-    "static/media/SketchUp_logo.svg": "/static/media/SketchUp_logo.fdd0835a2bbd0bc93c09c224c6e84ac5.svg",
-    "static/media/Typescript_logo_2020.svg": "/static/media/Typescript_logo_2020.774748b0184ffbcb8155849cf4533eab.svg",
-    "index.html": "/index.html",
-    "static/media/envelope-solid.svg": "/static/media/envelope-solid.dba533a0d3bd121023c13a25036858ed.svg",
-    "static/media/linkedin-brands.svg": "/static/media/linkedin-brands.35d7cb01584842580623e4e827edfe6d.svg",
-    "static/media/React-icon.svg": "/static/media/React-icon.928f956d9c8ebcffb98a8e917154a81a.svg",
-    "main.72feabed.css.map": "/static/css/main.72feabed.css.map",
-    "main.7eee2069.js.map": "/static/js/main.7eee2069.js.map"
+    "main.css": "/tifsequence/static/css/main.267d5bc8.css",
+    "main.js": "/tifsequence/static/js/main.55d355ea.js",
+    "static/media/cinema-4d-logo.svg": "/tifsequence/static/media/cinema-4d-logo.a8af00b7a2ff0df16a8fae7c0a9140d4.svg",
+    "static/media/guardian_grassy.png": "/tifsequence/static/media/guardian_grassy.e2899d8559f466fb3e0f.png",
+    "static/media/Blender_logo.svg": "/tifsequence/static/media/Blender_logo.e1f221731ac65bcde0af5dd6b72ef338.svg",
+    "static/media/Photoshop.svg": "/tifsequence/static/media/Photoshop.495e7c7653f13565cf7ef772322736bc.svg",
+    "static/media/AfterEffects.svg": "/tifsequence/static/media/AfterEffects.db9bc92801589144820b4a41405bfeea.svg",
+    "static/media/ISO_C++_Logo.svg": "/tifsequence/static/media/ISO_C++_Logo.2441702dffa95ca3c92c20816e386640.svg",
+    "static/media/python-3-logo.svg": "/tifsequence/static/media/python-3-logo.82147ff2f774e1473996ef474c53c76d.svg",
+    "static/media/redshift-seeklogo.svg": "/tifsequence/static/media/redshift-seeklogo.10b183f7a71d66af595995f9ec53d6c2.svg",
+    "static/media/AnimateCopy.svg": "/tifsequence/static/media/AnimateCopy.eb076684750f7db7e07053afc7546514.svg",
+    "static/media/github-brands.svg": "/tifsequence/static/media/github-brands.833b63e28cadf07403bc81451d30b858.svg",
+    "static/media/Illustrator.svg": "/tifsequence/static/media/Illustrator.27767692bc4726d1ebb94b58a5188255.svg",
+    "static/media/SketchUp_logo.svg": "/tifsequence/static/media/SketchUp_logo.fdd0835a2bbd0bc93c09c224c6e84ac5.svg",
+    "static/media/Typescript_logo_2020.svg": "/tifsequence/static/media/Typescript_logo_2020.774748b0184ffbcb8155849cf4533eab.svg",
+    "index.html": "/tifsequence/index.html",
+    "static/media/envelope-solid.svg": "/tifsequence/static/media/envelope-solid.dba533a0d3bd121023c13a25036858ed.svg",
+    "static/media/linkedin-brands.svg": "/tifsequence/static/media/linkedin-brands.35d7cb01584842580623e4e827edfe6d.svg",
+    "static/media/React-icon.svg": "/tifsequence/static/media/React-icon.928f956d9c8ebcffb98a8e917154a81a.svg",
+    "main.267d5bc8.css.map": "/tifsequence/static/css/main.267d5bc8.css.map",
+    "main.55d355ea.js.map": "/tifsequence/static/js/main.55d355ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.72feabed.css",
-    "static/js/main.7eee2069.js"
+    "static/css/main.267d5bc8.css",
+    "static/js/main.55d355ea.js"
   ]
 }
