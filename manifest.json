@@ -1,6 +1,7 @@
 {
     "name":"Tiffany C Personal Site",
     "short_name":"TC Personal Site",
+    "start_url": "/",
     "icons":[
         {
             "src": "./favicon.ico",
