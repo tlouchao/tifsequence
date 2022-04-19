@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useState } from 'react'
 import { Link } from 'react-router-dom'
 // svg import
 import { ReactComponent as InIcon } from 'static/imgs/linkedin-brands.svg'
@@ -7,8 +7,12 @@ import { ReactComponent as MailIcon } from 'static/imgs/envelope-solid.svg'
 
 function Sidebar() {
 
+    const [brandImg, setBrandImg] = useState<string>('/cube.png')
+    const handleBrandMouseEnter = (e : MouseEvent) => {setBrandImg('/cubem.png')}
+    const handleBrandMouseLeave = (e : MouseEvent) => {setBrandImg('/cube.png')}
+
     // sidebar navigation
-    const links: string[] = ["about", "art", "code", "misc"]
+    const links: string[] = ["about", "projects", "misc"]
     const linksItems: ReactElement[] = links.map(elem => {
         const linkTo: string = '/' + elem
         const linkTitle: string = (elem === "misc") ? 
@@ -22,7 +26,6 @@ function Sidebar() {
     const iconsItems: ReactElement[] = hrefs.map((elem, idx) => {
         return (<div key={'si-' + idx} className="sidebar-icon">
                     <a href={hrefs[idx]}>
-                        {/*Nested div to enable hover over SVG negative space*/}
                         <div><svg>{icons[idx]}</svg></div>
                     </a>
                 </div>
@@ -32,19 +35,22 @@ function Sidebar() {
     // render JSX
     return (
         <div id="sidebar">
-            <div id="sidebar-brand">
-                <Link to='/'>
-                    <img src={process.env.PUBLIC_URL + '/gyrfalcon.jpg'} alt='gyrfalcon.jpg'/>
-                </Link>
-            </div>
-            <div id="sidebar-nav">
-                <ul>{linksItems}</ul>
-            </div>
-            <div id="sidebar-icons">
-                {iconsItems}
-            </div>
-            <div id="sidebar-copyright">
-                <p>&copy; 2022 Tiffany C</p>
+            <div id="sidebar-sticky">
+                <div id="sidebar-brand">
+                    <Link to='/'>
+                        <img src={process.env.PUBLIC_URL + brandImg} alt={brandImg}
+                            onMouseEnter={handleBrandMouseEnter} onMouseLeave={handleBrandMouseLeave}/>
+                    </Link>
+                </div>
+                <div id="sidebar-nav">
+                    <ul>{linksItems}</ul>
+                </div>
+                <div id="sidebar-icons">
+                    {iconsItems}
+                </div>
+                <div id="sidebar-copyright">
+                    <p>&copy; 2022. All Rights Reserved</p>
+                </div>
             </div>
         </div>
     )

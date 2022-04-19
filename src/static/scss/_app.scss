@@ -4,7 +4,7 @@
     color: map-get(v.$colors, textcolor);
     font-size: map-get(v.$font, fontsize);
     font-family: map-get(v.$font, fontfamily);
-    font-weight: lighter;
+    font-weight: 300;
     body {
         height: 100%;
     }

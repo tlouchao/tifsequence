@@ -17,3 +17,10 @@
     }
     @media #{$conditions} { @content; }
 }
+
+@mixin card-common() {
+    display: flex;
+    margin: 0em 1em;
+    margin-top: 1em;
+    padding: 1em;
+}

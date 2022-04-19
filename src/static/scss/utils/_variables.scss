@@ -1,6 +1,7 @@
 $colors: (
     bgcolor: #424242,
     navcolor: #363636,
+    capscolor: #121212,
     cardcolor: #505050,
     bordercolor: #606060,
     textcolor: #EEEEEE,
@@ -10,17 +11,17 @@ $colors: (
     alinkcolor: rgb(234, 64, 234)
 );
 
-$fontfamily:  "Arial Narrow", Arial, Helvetica, sans-serif;
-$fontfamily-helvetica: "Helvetica", sans-serif;
+$fontfamily:  'Roboto', 'Arial Narrow', Arial, Helvetica, sans-serif;
+$fontfamily-helvetica: Helvetica, sans-serif;
 $font: (
-    fontsize: 16px,
-    fontnavsize: 10px,
+    fontsize: 18px,
+    fontnavsize: 14px,
     fontfamily: $fontfamily
 );
 
 $cssgrid: (
-    cmin: 160px, 
-    cmax: 160px
+    cmin: 200px, 
+    cmax: 240px
 );
 
 // media query
@@ -29,3 +30,5 @@ $breakpoints: (
     tablet: 768px, 
     desktop: 1024px
 ) !default;
+
+$leftgrad: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,.25));

@@ -2,27 +2,24 @@
 @use '../utils/variables' as v;
 
 #about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: fit-content;
+    padding-top: 50px;
+    padding-bottom: 1em;
+    .card img {
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+    }
     .card {
-        display: flex;
-        margin: 0em 1em;
-        margin-top: 1em;
-        padding: 1em;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         background-color: map-get(v.$colors, cardcolor);
         min-height: 180px;
-        max-width: 720px;
+        max-width: 1080px;
+        @include m.card-common();
         @include m.breakpoint_range($to: phone) {
             flex-direction: column;
-        }
-        img {
-            width: 128px;
-            height: 128px;
-            border-radius: 50%;
         }
         .card-content {
             @include m.breakpoint_range($from: desktop) {
@@ -36,45 +33,72 @@
             }
             @include m.breakpoint_range($to: phone) {
                 margin-left: 0em;
-                margin-top: 1em;
+            }
+            p { 
+                max-width: 720px;
+                padding: .25em;
+                line-height: 1.25;
+            }
+            .p-content {
+                text-align: justify;
             }
         }
-        p { max-width: 540px; }
     }
-    .card-header {
-        min-height: 72px;
-        .icons {
-            display: grid;
+
+    .card-first {
+        margin-top: 0em;
+        margin-bottom: 50px;
+    }
+    .card-project {
+        @include m.card-common();
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        @include m.breakpoint_range($from: desktop) {
+            min-height: 360px;
+        }
+        @include m.breakpoint_range($from: tablet, $to: desktop) {
+            min-height: 360px;
+        }
+        @include m.breakpoint_range($from: phone, $to: tablet) {
+            min-height: 240px;
+        }
+        @include m.breakpoint_range($to: phone) {
+            min-height: 240px;
+        }
+        max-width: calc(1080px + 2em);
+        padding: 0em;
+        z-index: 0;
+        .card-thumbnail img {
             width: 100%;
-            grid-template-columns: 1fr 1fr 1fr;
-            .icon-col {
-                display: flex;
-                flex-direction: column;
-                .icon-row {
-                    width: 100%;
-                    display:flex;
-                    flex-direction: row;
-                    align-items: center;
-                    padding: .1em;
-                    p {
-                        font-size: 12px;
-                        padding-left: .5em;
-                        transition: transform .2s, color .2s;
-                        color: map-get(v.$colors, subtextcolor);
-                        &:hover {
-                            transform: translate(5px, 0px);
-                            color: map-get(v.$colors, textcolor);
-                        }
-                    }
-                    svg {
-                        width: 24px;
-                        height: 24px;
-                        transition: transform .2s;
-                        &:hover {
-                            transform: scale(1.25, 1.25);
-                        }
-                    }
+            height: 100%;
+            border-radius: 0%;
+        }
+        .card-thumbnail {
+            width: 100%;
+            min-height: inherit;
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: transform .2s;
+            z-index: 1;
+                &:hover {
+                    transform: scale(1.025, 1.025);
                 }
+        }
+        .card-overlay {
+            position: absolute;
+            right: 0;
+            width: 25%;
+            display: flex;
+            min-height: inherit;
+            flex-direction: column;
+            justify-content: center;
+            background-color: map-get(v.$colors, capscolor);
+            z-index: 2;
+            p {
+               font-size: min(calc(10px + 1vw), 24px);
+                padding: 1em;
             }
         }
     }

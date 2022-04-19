@@ -21,7 +21,7 @@ function Home() {
                     <Link to='/about'><p>Tiffany C</p></Link>
                 </div>
                 <div id="home-img-overlay">
-                    <div id="home-img" style={{ opacity: bgOpacity }}/>
+                    <div id="home-img" style={{ opacity: bgOpacity, backgroundImage: 'url(' + process.env.PUBLIC_URL + 'guardian_grassy.png)'}}/>
                 </div>
             </div>
         </Layout>

@@ -5,88 +5,111 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    justify-content: flex-start;
+    background-color: map-get(v.$colors, navcolor);
     line-height: 0;
     font-family: v.$fontfamily-helvetica;
-    background-color: map-get(v.$colors, navcolor);
-    #sidebar-brand {
-        align-self: center;
-        padding: .5em 0;
-        a {
-            font-size: 0; // remove unwanted height
-            img {
-                height: 100px;
-                width: 100px;
-                border-radius: 50%;
-                padding: 0em 0;
+    #sidebar-sticky {
+        position: sticky;
+        left: 0px;
+        @include m.breakpoint-range($from: desktop) {
+            height: 100vh;
+        }
+        @include m.breakpoint-range($from: tablet, $to: desktop) {
+            height: 100vh;
+        }
+        @include m.breakpoint-range($from: phone, $to: tablet) {
+            height: 100%;
+        }
+        @include m.breakpoint-range($to: phone) {
+            height: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        #sidebar-brand {
+            align-self: center;
+            padding: .5em 0;
+            a {
+                font-size: 0; // remove unwanted height
+                img {
+                    height: 92px;
+                    width: 92px;
+                    border-radius: 50%;
+                    padding: 0em 0;
+                    transition: transform .2s;
+                    &:hover {
+                        transform: translate(0px, -2px);
+                    }
+                }
             }
         }
-    }
-    #sidebar-nav {
-        li {
+        #sidebar-nav {
+            li {
+                @include m.breakpoint_range($from: phone, $to: tablet) {
+                    border-top: 1px solid map-get(v.$colors, bordercolor);
+                }
+                @include m.breakpoint_range($to: phone) {
+                    border-top: 1px solid map-get(v.$colors, bordercolor);
+                }
+                text-align: center;
+                padding: .5em 0;
+                line-height: 1em;
+                font-size: map-get(v.$font, fontnavsize);
+                a {
+                    transition: color .1s;
+                    position: relative;
+                    top: 1px; // 1px vert offset
+                    &:link, &:visited {
+                        text-decoration: none;
+                        color: map-get(v.$colors, vlinkcolor);
+                    }
+                    &:hover, &:active {
+                        text-decoration: none;
+                        color: map-get(v.$colors, alinkcolor);
+                    }
+                }
+            }
+        }
+        #sidebar-icons {
             @include m.breakpoint_range($from: phone, $to: tablet) {
                 border-top: 1px solid map-get(v.$colors, bordercolor);
             }
             @include m.breakpoint_range($to: phone) {
                 border-top: 1px solid map-get(v.$colors, bordercolor);
             }
-            text-align: center;
-            padding: .5em 0;
-            line-height: 1em;
-            font-size: map-get(v.$font, fontnavsize);
-            a {
-                transition: color .1s;
-                position: relative;
-                top: 1px; // 1px vert offset
-                &:link, &:visited {
-                    text-decoration: none;
-                    color: map-get(v.$colors, vlinkcolor);
-                }
-                &:hover, &:active {
-                    text-decoration: none;
-                    color: map-get(v.$colors, alinkcolor);
-                }
-            }
-        }
-    }
-    #sidebar-icons {
-        @include m.breakpoint_range($from: phone, $to: tablet) {
-            border-top: 1px solid map-get(v.$colors, bordercolor);
-        }
-        @include m.breakpoint_range($to: phone) {
-            border-top: 1px solid map-get(v.$colors, bordercolor);
-        }
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        line-height: .5;
-        padding: 1em .5em;
-        .sidebar-icon {
-            padding: 0em .1em;
-            a {
-                font-size: 0; // remove unwanted height
-                svg {
-                    width: 16px;
-                    height: 16px;
-                    transition: fill .1s;
-                    fill: map-get(v.$colors, iconcolor);
-                }
-                &:hover, &:active {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            line-height: .5;
+            padding: 1em .5em;
+            .sidebar-icon {
+                padding: 0em .2em;
+                a {
+                    font-size: 0; // remove unwanted height
                     svg {
-                        fill: map-get(v.$colors, textcolor);
+                        width: 24px;
+                        height: 24px;
+                        transition: fill .1s;
+                        fill: map-get(v.$colors, iconcolor);
+                    }
+                    &:hover, &:active {
+                        svg {
+                            fill: map-get(v.$colors, textcolor);
+                        }
                     }
                 }
             }
         }
-    }
-    #sidebar-copyright {
-        align-self: center;
-        padding-bottom: .5em;
-        line-height: 1;
-        font-size: 10px;
-        color: map-get(v.$colors, bordercolor);
+        #sidebar-copyright {
+            align-self: center;
+            padding-bottom: .75em;
+            line-height: 1;
+            font-size: map-get(v.$font, fontnavsize);
+            color: map-get(v.$colors, bordercolor);
+        }
     }
 }

@@ -36,22 +36,8 @@ nav {
 main {
   z-index: 0;
   width: 100%;
-  @include m.breakpoint_range($from: phone, $to: tablet) {
-    display: flex;
-    flex-grow: 1;
-  }
-  @include m.breakpoint_range($to: phone) {
-    display: flex;
-    flex-grow: 1;
-  }
   height: 100%;
   .main-content {
-    @include m.breakpoint_range($from: phone, $to: tablet) {
-      width: 100%;
-    }
-    @include m.breakpoint_range($to: phone) {
-      width: 100%;
-    }
     height: 100%;
     background-color: map-get(v.$colors, bgcolor);
   }
