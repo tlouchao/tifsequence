@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Layout from 'layout/Layout';
 
 function About() {
@@ -10,7 +11,7 @@ function About() {
 
     const summaryAssetsPrefix: string = 'Site assets are built with '
     const summaryLanding: string[] = ['the landing page model is textured and rendered with the ', ' software package. ']
-    const summaryProjects: string[] = ['Contained below is a series of projects, with source code available on Github: ']
+    const summaryProjects: string[] = ['Below is a list of projects, accompanied by demos/additional details:']
     const c4d: HTMLAnchorElement = <a href="https://www.maxon.net/en/cinema-4d" style={{color: '#FF4000'}}>Cinema 4D</a>
 
     // return JSX
@@ -39,16 +40,24 @@ function About() {
                         </div>
                     </div>
                 </div>
-                {[...Array(3)].map((elem, idx) => {
-                    return <div key={idx} className='card card-project'>
-                        <div className='card-thumbnail' 
-                            style={{backgroundImage: 'url(' + process.env.PUBLIC_URL + '/thumbnail/colorpicker_thumbnail.png)'}}>
-                        </div>
-                        <div className='card-overlay'>
-                            <p>Color picker component modeled after Chrome's default color picker tool.</p>
-                        </div>
+                <div key={0} className='card card-project'>
+                    <div className='card-thumbnail' 
+                        style={{backgroundImage: 'url(' + process.env.PUBLIC_URL + '/thumbnail/colorpicker_thumbnail.png)'}}>
                     </div>
-                 })} 
+                    <div className='card-overlay'>
+                        <p>Color picker component modeled after Chrome's default color picker tool.</p><br/>
+                        <p><a href="https://tlouchao.github.io/simple-color-picker/">---&gt; Demo</a></p>
+                    </div>
+                </div>
+                <div key={0} className='card card-project'>
+                    <div className='card-thumbnail' 
+                        style={{backgroundImage: 'url(' + process.env.PUBLIC_URL + '/bmp/check.bmp)'}}>
+                    </div>
+                    <div className='card-overlay'>
+                        <p>Image generated as a result of <a href="https://github.com/ssloy">Dmitry Sokolov's</a> computer graphics / rendering course.</p><br/>
+                        <p><Link to="/resources">---&gt; Images</Link></p>
+                    </div>
+                </div>
             </div>
         </Layout>
     )

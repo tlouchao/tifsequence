@@ -1,11 +1,15 @@
 import React from 'react'
 import Layout from 'layout/Layout'
 
-function Misc() {
+const Misc = () => {
+    const art : string[] = ['vivo', 'cardinals', 'bugatti', 'sargent', 'surfaces']
     return (
         <Layout>
             <div id="misc">
-                <p>Miscellaneous directory</p>
+                {art.map((elem, idx) => 
+                    <img key={idx} 
+                         src={process.env.PUBLIC_URL + '/art/' + elem + '.png'}
+                         alt={elem + 'png'}/>)}
             </div>
         </Layout>
     )

@@ -12,7 +12,7 @@ function Sidebar() {
     const handleBrandMouseLeave = (e : MouseEvent) => {setBrandImg('/cube.png')}
 
     // sidebar navigation
-    const links: string[] = ["about", "projects", "misc"]
+    const links: string[] = ["about", "resources", "misc"]
     const linksItems: ReactElement[] = links.map(elem => {
         const linkTo: string = '/' + elem
         const linkTitle: string = (elem === "misc") ? 

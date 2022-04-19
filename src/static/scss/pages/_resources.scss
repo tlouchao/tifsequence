@@ -1,0 +1,9 @@
+@use '../utils/mixins' as m;
+@use '../utils/variables' as v;
+
+#resources {
+    img {
+        width: 240px;
+        height: auto;
+    }
+}

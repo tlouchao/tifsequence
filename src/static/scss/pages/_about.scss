@@ -75,7 +75,9 @@
             border-radius: 0%;
         }
         .card-thumbnail {
-            width: 100%;
+            position: absolute;
+            left: 0;
+            width: 75%;
             min-height: inherit;
             background-position: top left;
             background-repeat: no-repeat;
@@ -98,7 +100,15 @@
             z-index: 2;
             p {
                font-size: min(calc(10px + 1vw), 24px);
-                padding: 1em;
+                padding: 0em 1em;
+                a {
+                    text-decoration: none;
+                    color: map-get(v.$colors, vlinkcolor);
+                    transition: color .1s;
+                    &:hover, &:active {
+                        color: map-get(v.$colors, alinkcolor)
+                    }
+                }
             }
         }
     }
