@@ -1,9 +1,53 @@
 @use '../utils/mixins' as m;
 @use '../utils/variables' as v;
 
-#misc {
-    img {
-        width: 240px;
-        height: auto;
+#misc-wrapper {
+    padding: 1em;
+    padding-top: calc(50px - 1em);
+    @include m.breakpoint_range($from: phone, $to: tablet) {
+        height: fit-content;
+    }
+    @include m.breakpoint_range($to: phone) {
+        height: fit-content;
+    }
+    p {
+        padding: 1em;
+        margin: 1em 0em;
+        margin-top: 1em;
+        background-color: map-get(v.$colors, cardcolor);
+    }
+    .img-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        @include m.breakpoint_range($from: desktop) {
+            height: max(960px, calc(720px + 20vh / 2));
+        }
+        @include m.breakpoint_range($from: tablet, $to: desktop) {
+            height: max(960px, calc(720px + 20vh / 2));
+        }
+        @include m.breakpoint_range($from: phone, $to: tablet) {
+            align-items: center;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+        @include m.breakpoint_range($to: phone) {
+            align-items: center;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+        img {
+            padding: 0em;
+            margin-top: 1em;
+            width: max(240px, calc(180px + 20vw / 2));
+            height: auto;
+            @include m.breakpoint_range($from: desktop) {
+                margin-right: 1em;
+            }
+            @include m.breakpoint_range($from: tablet, $to: desktop) {
+                margin-right: 1em;
+            }
+        }
     }
 }
