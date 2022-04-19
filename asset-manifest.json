@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/tifsequence/static/css/main.3cd7e99b.css",
-    "main.js": "/tifsequence/static/js/main.e89afcaa.js",
+    "main.js": "/tifsequence/static/js/main.9a2abed3.js",
     "static/media/github-brands.svg": "/tifsequence/static/media/github-brands.833b63e28cadf07403bc81451d30b858.svg",
     "index.html": "/tifsequence/index.html",
     "static/media/envelope-solid.svg": "/tifsequence/static/media/envelope-solid.dba533a0d3bd121023c13a25036858ed.svg",
     "static/media/linkedin-brands.svg": "/tifsequence/static/media/linkedin-brands.35d7cb01584842580623e4e827edfe6d.svg",
     "main.3cd7e99b.css.map": "/tifsequence/static/css/main.3cd7e99b.css.map",
-    "main.e89afcaa.js.map": "/tifsequence/static/js/main.e89afcaa.js.map"
+    "main.9a2abed3.js.map": "/tifsequence/static/js/main.9a2abed3.js.map"
   },
   "entrypoints": [
     "static/css/main.3cd7e99b.css",
-    "static/js/main.e89afcaa.js"
+    "static/js/main.9a2abed3.js"
   ]
 }
