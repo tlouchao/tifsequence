@@ -18,44 +18,46 @@ function About() {
     return (
         <Layout>
             <div id="about">
-                <div className="card card-first">
-                    <img src={process.env.PUBLIC_URL + '/fprofile.jpg'} alt='profile.jpg'/>
-                    <div className="card-content">
-                        <div>
-                            <p>Welcome,</p><br/>
-                            <p className='p-content'>{summaryAssetsPrefix}
-                            {langs.map((lang, idx) => {
-                                const andDelim: HTMLSpanElement | string = (idx === langs.length - 1) ? <span style={{color: colorText}}>and </span> : ''
-                                const delim: string = (idx === langs.length - 1) ? ' - ' : ', '
-                                return (<span key={lang}>
-                                            {andDelim}
-                                            <a href={hrefLangs[idx]} style={{color: colorLangs[idx]}}>
-                                                {lang}
-                                            </a>
-                                            <span>{delim}</span>
-                                        </span>
+                <div id="about-wrapper">
+                    <div className="card card-first">
+                        <img src={process.env.PUBLIC_URL + '/fprofile.jpg'} alt='profile.jpg'/>
+                        <div className="card-content">
+                            <div>
+                                <p>Welcome,</p><br/>
+                                <p className='p-content'>{summaryAssetsPrefix}
+                                {langs.map((lang, idx) => {
+                                    const andDelim: HTMLSpanElement | string = (idx === langs.length - 1) ? <span style={{color: colorText}}>and </span> : ''
+                                    const delim: string = (idx === langs.length - 1) ? ' - ' : ', '
+                                    return (<span key={lang}>
+                                                {andDelim}
+                                                <a href={hrefLangs[idx]} style={{color: colorLangs[idx]}}>
+                                                    {lang}
+                                                </a>
+                                                <span>{delim}</span>
+                                            </span>
+                                    )}
                                 )}
-                            )}
-                            {summaryLanding[0]}{c4d}{summaryLanding[1]}{summaryProjects}</p>
+                                {summaryLanding[0]}{c4d}{summaryLanding[1]}{summaryProjects}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div key={0} className='card card-project'>
-                    <div className='card-thumbnail' 
-                        style={{backgroundImage: 'url(' + process.env.PUBLIC_URL + '/thumbnail/colorpicker_thumbnail.png)'}}>
+                    <div key={'proj0'} className='card card-project'>
+                        <div className='card-thumbnail' 
+                            style={{backgroundImage: 'url(' + process.env.PUBLIC_URL + '/thumbnail/colorpicker_thumbnail.png)'}}>
+                        </div>
+                        <div className='card-overlay'>
+                            <p>Color picker component modeled after Chrome's default color picker tool.</p><br/>
+                            <p><a href="https://tlouchao.github.io/simple-color-picker/">---&gt; Demo</a></p>
+                        </div>
                     </div>
-                    <div className='card-overlay'>
-                        <p>Color picker component modeled after Chrome's default color picker tool.</p><br/>
-                        <p><a href="https://tlouchao.github.io/simple-color-picker/">---&gt; Demo</a></p>
-                    </div>
-                </div>
-                <div key={0} className='card card-project'>
-                    <div className='card-thumbnail' 
-                        style={{backgroundImage: 'url(' + process.env.PUBLIC_URL + '/bmp/check.bmp)'}}>
-                    </div>
-                    <div className='card-overlay'>
-                        <p>Image generated as a result of <a href="https://github.com/ssloy">Dmitry Sokolov's</a> computer graphics / rendering course.</p><br/>
-                        <p><Link to="/resources">---&gt; Images</Link></p>
+                    <div key={'proj1'} className='card card-project'>
+                        <div className='card-thumbnail' 
+                            style={{backgroundImage: 'url(' + process.env.PUBLIC_URL + '/bmp/check.bmp)'}}>
+                        </div>
+                        <div className='card-overlay'>
+                            <p>Image generated as a result of <a href="https://github.com/ssloy">Dmitry Sokolov's</a> computer graphics / rendering course.</p><br/>
+                            <p><Link to="/resources">---&gt; Images</Link></p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@ import { ReactComponent as InIcon } from 'static/imgs/linkedin-brands.svg'
 import { ReactComponent as GhIcon } from 'static/imgs/github-brands.svg'
 import { ReactComponent as MailIcon } from 'static/imgs/envelope-solid.svg'
 
-function Sidebar() {
+const Sidebar = (props) => {
 
     const [brandImg, setBrandImg] = useState<string>('/cube.png')
     const handleBrandMouseEnter = (e : MouseEvent) => {setBrandImg('/cubem.png')}
@@ -34,7 +34,7 @@ function Sidebar() {
 
     // render JSX
     return (
-        <div id="sidebar">
+        <div id="sidebar" style={props.style}>
             <div id="sidebar-sticky">
                 <div id="sidebar-brand">
                     <Link to='/'>

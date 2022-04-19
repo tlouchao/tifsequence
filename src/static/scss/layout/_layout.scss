@@ -5,7 +5,7 @@ $cmin: map-get(v.$cssgrid, cmin);
 $cmax: map-get(v.$cssgrid, cmax);
 
 #wrapper {
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     @include m.breakpoint_range($from: desktop) {
       display: grid;

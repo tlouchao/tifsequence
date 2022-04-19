@@ -1,13 +1,12 @@
 @use '../utils/mixins' as m;
 @use '../utils/variables' as v;
 
-#about {
-    height: fit-content;
+#about-wrapper {
     padding-top: 50px;
     padding-bottom: 1em;
     .card img {
-        width: 128px;
-        height: 128px;
+        width: max(128px, calc(36px + (10vw / 2)));
+        height: max(128px, calc(36px + (10vw / 2)));
         border-radius: 50%;
     }
     .card {
@@ -15,9 +14,14 @@
         justify-content: flex-start;
         align-items: center;
         background-color: map-get(v.$colors, cardcolor);
-        min-height: 180px;
-        max-width: 1080px;
+        min-height: max(240px, calc(160px + 10vh / 2));
         @include m.card-common();
+        @include m.breakpoint_range($from: desktop) {
+            max-width: 80vw;
+        }
+        @include m.breakpoint_range($from: tablet, $to: desktop) {
+            max-width: 80vw;
+        }
         @include m.breakpoint_range($to: phone) {
             flex-direction: column;
         }
@@ -35,7 +39,7 @@
                 margin-left: 0em;
             }
             p { 
-                max-width: 720px;
+                max-width: max(720px, 640px + (20vw / 2));
                 padding: .25em;
                 line-height: 1.25;
             }
@@ -46,7 +50,7 @@
     }
 
     .card-first {
-        margin-top: 0em;
+        margin-top: 0px;
         margin-bottom: 50px;
     }
     .card-project {
@@ -55,10 +59,12 @@
         overflow: hidden;
         display: flex;
         @include m.breakpoint_range($from: desktop) {
-            min-height: 360px;
+            min-height: max(360px, calc(300px + 5vw));
+            max-width: calc(80vw + 2em);
         }
         @include m.breakpoint_range($from: tablet, $to: desktop) {
-            min-height: 360px;
+            min-height: max(360px, calc(300px + 5vw));
+            max-width: calc(80vw + 2em);
         }
         @include m.breakpoint_range($from: phone, $to: tablet) {
             min-height: 240px;

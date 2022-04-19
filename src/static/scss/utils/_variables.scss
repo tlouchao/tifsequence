@@ -14,14 +14,14 @@ $colors: (
 $fontfamily:  'Roboto', 'Arial Narrow', Arial, Helvetica, sans-serif;
 $fontfamily-helvetica: Helvetica, sans-serif;
 $font: (
-    fontsize: 18px,
-    fontnavsize: 14px,
+    fontsize: max(18px, calc(14px + 1vw / 2)),
+    fontnavsize: max(14px, calc(8px + 1vw / 3)),
     fontfamily: $fontfamily
 );
 
 $cssgrid: (
-    cmin: 200px, 
-    cmax: 240px
+    cmin: max(240px, calc(180px + 8vw / 2)),
+    cmax: max(240px, calc(180px + 8vw / 2))
 );
 
 // media query

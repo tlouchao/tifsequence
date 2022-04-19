@@ -1,6 +1,15 @@
 @use '../utils/mixins' as m;
 @use '../utils/variables' as v;
 
+#home {
+    @include m.breakpoint_range($from: phone, $to: tablet) {
+        height: 100vh;
+    }
+    @include m.breakpoint_range($to: phone) {
+        height: 100vh;
+    }
+
+}
 #home-title {
     a {
         line-height: 0;
@@ -8,16 +17,16 @@
         color: black;
     }
     @include m.breakpoint_range($from: desktop) {
-        font-size: max(6rem, 7.5vw);
+        font-size: max(84px, 72px + (8vw / 2));
     }
     @include m.breakpoint_range($from: tablet, $to: desktop) {
-        font-size: max(6rem, 7.5vw);
+        font-size: max(84px, 72px + (8vw / 2));
     }
     @include m.breakpoint_range($from: phone, $to: tablet) {
-        font-size: 4rem;
+        font-size: max(54px, 42px + (8vw / 2));
     }
     @include m.breakpoint_range($to: phone) {
-        font-size: 4rem;
+        font-size: max(54px, 42px + (8vw / 2));
     }
     font-family: 'Poiret One', cursive;
     position: relative;

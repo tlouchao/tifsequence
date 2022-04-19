@@ -7,7 +7,7 @@ const Misc = () => {
         <Layout>
             <div id="misc">
                 {art.map((elem, idx) => 
-                    <img key={idx} 
+                    <img key={elem + '-' + idx}
                          src={process.env.PUBLIC_URL + '/art/' + elem + '.png'}
                          alt={elem + 'png'}/>)}
             </div>
